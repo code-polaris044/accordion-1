@@ -26,14 +26,6 @@ main {
     border-radius: 5px;
 }
 
-.menu a {
-    transition: 0.3;
-}
-
-.menu a:hover {
-    opacity: 0.7;
-}
-
 .menu > li > a {
     display: flex;
     justify-content: space-between;
@@ -48,6 +40,13 @@ main {
 }
 
 @media screen and (max-width: 750px) {
+    .menu a {
+        transition: 0.3;
+    }
+
+    /* .menu a:hover {
+        opacity: 0.7;
+    } */
     .menu ul {
         display: none;
     }
