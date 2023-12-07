@@ -35,7 +35,8 @@ main {
 }
 
 .menu > li > a {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     background-color: #ccc;
 }
@@ -44,4 +45,27 @@ main {
     padding: 10px;
     display: block;
     background-color: #aaa;
+}
+
+@media screen and (max-width: 750px) {
+    .menu ul {
+        display: none;
+    }
+
+    .menu ul.active {
+        display: block;
+    }
+    .menu > li > a::after {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 20px;
+        background-image: url("./img/a.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .menu > li > a.active::after {
+        transform: rotate(-180deg);
+    }
 }
