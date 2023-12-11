@@ -49,10 +49,13 @@ main {
     } */
     .menu ul {
         display: none;
+        /* opacity: 0; */
     }
 
     .menu ul.active {
         display: block;
+        /* opacity: 1; */
+        /* transition: all 1s ease-out; */
     }
     .menu > li > a::after {
         content: "";
@@ -62,9 +65,32 @@ main {
         background-image: url("./img/a.png");
         background-size: contain;
         background-repeat: no-repeat;
+        transition: transform 0.3s;
     }
 
     .menu > li > a.active::after {
         transform: rotate(-180deg);
+    }
+}
+
+.imgTest {
+    position: relative;
+
+    .p {
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+
+    &:hover .p {
+        display: block;
+    }
+}
+
+.img {
+    object-fit: cover;
+
+    &:hover {
+        opacity: 0.8;
     }
 }

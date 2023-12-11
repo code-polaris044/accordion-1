@@ -55,3 +55,24 @@ window.addEventListener("resize", () => {
         removeEventListeners();
     }
 });
+
+// HTML文書内の最初のimg要素を取得し、myImageに割り当てる
+const myImage = document.querySelector("img");
+
+// myImageをコンソールに出力
+window.console.log(myImage);
+
+// myImageがクリックされたときに実行される関数を定義
+myImage.onclick = () => {
+    // 現在の画像のソース（src属性）を取得
+    const mySrc = myImage.getAttribute("src");
+
+    // 現在の画像のソースによって条件分岐
+    if (mySrc === "img/ll.jpg") {
+        // もし現在のソースが"img/ll.jpg"なら、ソースを"img/pp.jpg"に変更
+        myImage.setAttribute("src", "img/pp.jpg");
+    } else {
+        // それ以外の場合は、ソースを"img/ll.jpg"に変更
+        myImage.setAttribute("src", "img/ll.jpg");
+    }
+};

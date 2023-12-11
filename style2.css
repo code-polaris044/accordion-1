@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: #ececec;
+    padding: 10px;
+}
+
+p {
+    /* ベース */
+    background: #fff;
+    font-size: 16px;
+    margin: 0;
+
+    /* アニメーション要素 */
+    line-height: 0;
+    opacity: 0;
+    padding: 0 10px;
+    transition: all 0.2s ease-out;
+}
+
+.is-expand p {
+    line-height: 1.25;
+    opacity: 1;
+    padding: 16px 10px;
+}
